@@ -1,0 +1,34 @@
+.modal-title {
+    text-align: center;
+    color: #a61322;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.modal-body {
+    text-align: center;
+    .btn--primary {
+        margin-left: 0;
+    }
+    .btn--primary.btn--inside.uppercase.del {
+        background: #a61322;
+    }
+    img {
+        width: 50%;
+        margin-bottom: 30px;
+        border-radius: 5%;
+    }
+    .form__field {
+        width: 100%;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 50px;
+        }
+    }
+    .work__btn {
+        cursor: pointer;
+    }
+}
+.modal-dialog{
+    margin-top: 100px;
+}

@@ -1,0 +1,13 @@
+/* ----- HEADER ------------------------------------------------------------- */
+
+header {
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 2px -1px 5px #888888;
+    padding: 0 20px;
+    .bookmark__block {
+        display: inline-block;
+        height: 100%;
+        padding: 13px;
+    }
+}

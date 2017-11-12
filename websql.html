@@ -1,0 +1,45 @@
+<HTML>
+
+<HEAD>
+    <script type="text/javascript" charset="utf-8" src="./ebapi-modules.js">
+    </script>
+    <style>
+        h1 {
+            font-size: 2.5em;
+            background-color: lightgray;
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        button {
+            font-size: .5em;
+        }
+        
+        input {
+            font-size: 1.3em;
+        }
+        
+        #scanData {
+            width: 90%;
+            margin: 10px;
+        }
+    </style>
+</HEAD>
+
+<BODY>
+    <h1>WebSQL
+        <button onclick="window.location.href='./index.html'">Home</button>
+        <button onclick="EB.Application.quit();">Quit</button>
+    </h1>
+    <div id=content>
+        <div id="data">
+            <ul class="record-list" id="db-results"></ul>
+        </div>
+        <input type=button value="Add Record">
+        <input type=button value="Reset Database">
+    </div>
+</BODY>
+<SCRIPT>
+</SCRIPT>
+
+</HTML>

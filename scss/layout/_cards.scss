@@ -1,0 +1,317 @@
+/*--------------------
+Mixins
+---------------------*/
+
+$red_color: #a61322;
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*--------------------
+Body
+---------------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/*--------------------
+Shop Card
+---------------------*/
+
+.card__row {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.shop-card:hover .image__div {
+    filter: sepia(0%);
+}
+
+.shop-card {
+    height: 200px;
+    width: 100%;
+    //  @include center;
+    //  width: 350px;
+    z-index: 2;
+    position: relative;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+    z-index: 2;
+    transition: 0.4s ease-in-out;
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+        cursor: pointer
+    }
+    .slider {
+        text-align: center;
+    }
+    .image__div {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        filter: sepia(100%);
+        transition: 0.6s ease-in-out;
+    }
+    figure {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        outline: none!important;
+    }
+    .title {
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #23211f;
+        margin-bottom: 5px;
+        margin-top: 30px;
+    }
+    .desc {
+        font-size: 17px;
+        opacity: .8;
+        margin-bottom: 3px;
+    }
+    .cta {
+        //        padding: 20px 20px 5px;
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    .price {
+        float: left;
+        color: #FF3100;
+        font-size: 22px;
+        font-weight: 900;
+        padding-top: 2px;
+        transition: color .3s ease-in-out;
+        margin-top: 4px;
+    }
+}
+
+.cta .btn,
+.modal-content .btn {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    transform: translate(50%, -50%);
+    color: #a61322!important;
+    z-index: 1;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #FF3100;
+    padding: 12px 12px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    line-height: .95;
+    border: none;
+    background: none;
+    outline: none;
+    border: 1px solid #a61322;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff!important;
+    border: 1px solid transparent;
+    & .bg {
+        width: 101%;
+        height: 101%;
+        display: block!important;
+        z-index: -1;
+        opacity: 1;
+        transition: all .3s ease-in-out;
+        background: linear-gradient(135deg, #a61322, #d33f34);
+    }
+    &:hover {
+        -webkit-animation: nudge 0.3s linear infinite;
+        & .bg {
+            opacity: 0.8;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+/*--------------------
+Slick Dots
+---------------------*/
+
+.slick-dots {
+    bottom: -30px;
+    a {
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 16px;
+    }
+    span {
+        @include center;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+    }
+    circle {
+        fill: none;
+        stroke-width: 1;
+        stroke-linecap: round;
+        stroke-dasharray: 39 39;
+        stroke-dashoffset: 39;
+        transition: all .9s ease-in-out;
+        transition: stroke-dashoffset 0.5s;
+    }
+    .slick-active circle {
+        stroke-dashoffset: 0;
+    }
+}
+
+.single__card:hover .links__card {
+    bottom: -40px;
+}
+
+.card__hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    cursor: pointer
+}
+.local__link:hover{
+    color: $red_color;
+}
+.local__link:active, .local__link:focus{
+    color: #333;
+}
+.links__card {
+    transition: 0.6s ease-in-out;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    .link__card {
+        padding: 10px;
+        width: 32%;
+        display: inline-block;
+        transition: 0.6s ease-in-out;
+        border-radius: 10px;
+        &:hover {
+            //            background: rgba(179,51,65,0.3);
+        }
+        span {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: 0.6s ease-in-out;
+            &:hover {
+                color: $red_color;
+            }
+        }
+    }
+}
+
+
+/*--------------------
+Background
+--------------------*/
+
+.bg {
+    @include center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(15deg, #d33f34 50%, #a61322 50.1%);
+    z-index: 1;
+    display: none;
+}
+
+p {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    display: inline-block;
+    border-width: 4px 0;
+    padding: 1.5em 0em;
+    top: 18%;
+    left: 50%;
+    width: 40em;
+    span {
+        font: 700 4em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+        padding: .25em 0 .325em;
+        display: inline-block;
+        margin: 0 auto;
+        text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+        /* Clip Background Image */
+        background: url("../img/animated_text_fill.png") repeat-y;
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Animate Background Image */
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 80s linear infinite;
+        /* Activate hardware acceleration for smoother animations */
+        -webkit-transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+    }
+    a {
+        font: 700 4em/1 "Oswald", sans-serif;
+        transition: 0.6s ease-in-out;
+        &:hover {
+            color: $red_color;
+        }
+        &:active,
+        &:focus {
+            color: #333;
+        }
+    }
+}
+
+.work__block, .fun__block {
+    margin-bottom: 50px;
+}
+
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@-webkit-keyframes nudge {
+    0% {
+        right: 0px;
+    }
+    25% {
+        right: 5px;
+    }
+    50% {
+        right: 0px;
+    }
+    75% {
+        right: 5px;
+    }
+    100% {
+        right: 0px;
+    }
+}

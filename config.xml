@@ -1,0 +1,4 @@
+<WebDB>
+    <WebSQLDBQuota value="5000000"/>
+    <WebSQLDBPath value="file://%INSTALLDIR%"/>
+</WebDB>

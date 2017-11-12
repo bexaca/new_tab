@@ -1,0 +1,36 @@
+
+/* ----- MIXINS ------------------------------------------------------------- */
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    @include translateY(-50%);
+}
+
+@mixin bg-center {
+    background: {
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+// Responsive
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}

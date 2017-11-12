@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New Tab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom Style CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/database.js"></script>
+    <script type="text/javascript" src="js/funDatabase.js"></script>
+
+</head>
+
+<body style="background-image: url('img/background.png')">
+<!--
+    <header>
+        <div class="bookmark__block">
+            <a href="#">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18.404px" height="19.167px" viewBox="296.798 386.416 18.404 19.167" enable-background="new 296.798 386.416 18.404 19.167" xml:space="preserve">
+    <path d="M313.856,393.462l-1.875,0.014l-0.014-1.877c-0.005-0.582-0.385-1.069-0.913-1.249v-3.536c0-0.221-0.178-0.399-0.398-0.399
+        h-13.46c-0.22,0-0.398,0.178-0.398,0.399v18.37c0,0.161,0.096,0.305,0.242,0.366c0.147,0.063,0.318,0.032,0.433-0.08l6.454-6.213
+        l6.454,6.213c0.075,0.074,0.174,0.112,0.275,0.112c0.052,0,0.105-0.01,0.156-0.032c0.147-0.062,0.242-0.205,0.242-0.366v-5.881
+        c0.555-0.165,0.964-0.675,0.959-1.282L312,396.144l1.876-0.013c0.735-0.004,1.331-0.607,1.326-1.343
+        C315.195,394.058,314.597,393.462,313.856,393.462z M304.203,398.418c-0.154-0.148-0.398-0.148-0.553,0l-6.054,5.83v-17.035h12.662
+        v3.123c-0.556,0.164-0.963,0.675-0.958,1.282l0.013,1.877l-1.876,0.013c-0.735,0.006-1.331,0.607-1.325,1.345
+        c0.006,0.729,0.605,1.324,1.343,1.324l1.877-0.013l0.013,1.877c0.005,0.581,0.388,1.072,0.913,1.248v4.959L304.203,398.418z
+         M313.87,395.333l-2.274,0.017c-0.222,0.001-0.398,0.181-0.397,0.401l0.017,2.275c0.003,0.296-0.236,0.539-0.533,0.541v0.042
+        c-0.001,0-0.003,0-0.004,0v-0.044c-0.292,0-0.534-0.238-0.536-0.531l-0.017-2.276c-0.001-0.106-0.043-0.207-0.117-0.281
+        c-0.076-0.074-0.177-0.115-0.281-0.115c-0.001,0-0.002,0-0.002,0l-2.279,0.015c-0.294,0-0.534-0.239-0.537-0.532
+        c-0.002-0.297,0.237-0.538,0.533-0.54l2.276-0.016c0.105-0.001,0.206-0.044,0.281-0.119c0.073-0.075,0.114-0.177,0.112-0.283
+        l-0.014-2.275c-0.004-0.296,0.237-0.539,0.534-0.541c0.295,0,0.535,0.239,0.54,0.532l0.015,2.276c0,0.106,0.042,0.207,0.118,0.281
+        c0.075,0.075,0.168,0.112,0.283,0.115l2.279-0.016c0.293,0,0.533,0.239,0.536,0.532C314.406,395.089,314.166,395.332,313.87,395.333
+        z"/>
+    </svg>
+            </a>
+        </div>
+    </header>
+-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center google__search">
+                <form method=GET action="http://www.google.com/search">
+                    <a href=" http://www.google.com/" class="google__logo">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="286 376 40 40" enable-background="new 286 376 40 40" xml:space="preserve">
+<path id="one" fill="#28B446" d="M318.024,410.979L318.024,410.979c-3.291,2.646-7.473,4.23-12.024,4.23c-7.315,0-13.675-4.089-16.919-10.106
+	l6.225-5.095c1.622,4.329,5.798,7.411,10.694,7.411c2.104,0,4.076-0.569,5.768-1.563L318.024,410.979z"/>
+<path id="two" fill="#518EF8" d="M324.873,392.412c0.221,1.162,0.335,2.362,0.335,3.588c0,1.375-0.145,2.717-0.42,4.011
+	c-0.935,4.403-3.378,8.248-6.763,10.969l-0.001-0.001l-6.257-5.122c2.246-1.317,4.001-3.378,4.926-5.846h-10.271v-7.599h10.421
+	H324.873L324.873,392.412z"/>
+<path id="three" fill="#F14336" d="M318.261,381.214l-6.223,5.094c-1.751-1.094-3.82-1.727-6.038-1.727c-5.007,0-9.261,3.223-10.802,7.708
+	l-6.257-5.123h-0.001c3.197-6.164,9.637-10.375,17.061-10.375C310.661,376.792,314.934,378.452,318.261,381.214z"/>
+<path id="four" fill="#FBBB00" d="M295.306,400.008l-6.225,5.095c-1.46-2.709-2.289-5.809-2.289-9.103c0-3.185,0.775-6.189,2.148-8.834h0.001
+	l6.257,5.123c-0.399,1.163-0.616,2.412-0.616,3.711C294.582,397.41,294.837,398.761,295.306,400.008z"/>
+<path id="five" fill="#333333" d="M325.65,392.264c-0.071-0.374-0.397-0.644-0.777-0.644h-18.451c-0.438,0-0.792,0.354-0.792,0.792v7.599
+	c0,0.438,0.354,0.791,0.792,0.791h9.06c-0.919,1.809-2.349,3.336-4.115,4.372c-1.619,0.951-3.476,1.453-5.367,1.453
+	c-4.407,0-8.408-2.771-9.954-6.898c-0.447-1.188-0.673-2.442-0.673-3.729c0-1.182,0.193-2.344,0.573-3.454
+	c1.475-4.291,5.515-7.173,10.054-7.173c1.994,0,3.938,0.556,5.618,1.606c0.288,0.18,0.658,0.156,0.921-0.059l6.223-5.095
+	c0.184-0.149,0.29-0.373,0.29-0.609c0.001-0.236-0.104-0.461-0.285-0.612c-3.577-2.97-8.11-4.605-12.767-4.605
+	c-7.501,0-14.308,4.139-17.763,10.801c-1.463,2.819-2.237,6-2.237,9.199c0,3.309,0.824,6.586,2.384,9.479
+	c3.5,6.49,10.25,10.521,17.616,10.521c4.542,0,8.988-1.563,12.521-4.403l0,0c3.589-2.886,6.09-6.941,7.041-11.421
+	c0.29-1.363,0.438-2.769,0.438-4.176C326,394.743,325.883,393.486,325.65,392.264z M306,377.583c3.965,0,7.832,1.288,10.996,3.643
+	l-5.031,4.119c-1.815-1.019-3.865-1.555-5.965-1.555c-4.838,0-9.182,2.853-11.137,7.202l-4.916-4.025
+	C293.213,381.162,299.307,377.583,306,377.583z M287.583,396c0-2.657,0.549-5.205,1.631-7.586l5.067,4.148
+	c-0.326,1.113-0.492,2.267-0.492,3.438c0,1.283,0.197,2.541,0.586,3.745l-5.032,4.119C288.19,401.421,287.583,398.723,287.583,396z
+	 M290.097,405.294l4.896-4.008c0.898,1.874,2.257,3.484,3.976,4.697c2.064,1.457,4.496,2.227,7.031,2.227
+	c1.986,0,3.938-0.484,5.681-1.401l5.067,4.148c-3.14,2.267-6.835,3.46-10.748,3.46C299.434,414.417,293.399,410.938,290.097,405.294
+	z M324.014,399.846c-0.831,3.917-2.951,7.481-5.993,10.106l-4.915-4.023c1.963-1.407,3.48-3.376,4.329-5.641
+	c0.091-0.243,0.058-0.516-0.091-0.729c-0.147-0.213-0.391-0.341-0.65-0.341h-9.479v-6.016h16.991
+	c0.141,0.92,0.212,1.858,0.212,2.797C324.417,397.297,324.281,398.591,324.014,399.846z"/>
+</svg>
+                    </a>
+                    <input type="text" class="form__field" placeholder="What do you want to know?" name=q autocomplete=on/>
+                    <input type="submit" class="btn btn--primary btn--inside uppercase" value="Search">
+                    <input type=hidden name=hl value="en">
+                </form>
+            </div>
+        </div>
+        <div class="row card__row work__card">
+            <div class="col-md-12">
+                <p>
+                    <span>work</span>
+                    <a href="#/" data-toggle="modal" data-target="#myModaladd">+</a>
+                </p>
+            </div>
+        </div>
+        <div class="row card__row fun__card">
+            <div class="col-md-12">
+                <p>
+                    <span>FUN</span>
+                    <a href="#/" data-toggle="modal" data-target="#myModaladdFun">+</a>
+                </p>
+            </div>
+        </div>
+    </div>
+<div id="carlist"><ul></ul></div>
+
+    <!-- Modal remove -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete for sure?</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__image">
+                        <img src="https://media.giphy.com/media/vohOR29F78sGk/giphy.gif" alt="">
+                    </div>
+                    <a href="#/" class="btn--primary btn--inside uppercase">yes</a>
+                    <a href="#/" class="btn--primary btn--inside uppercase del" data-dismiss="modal">no</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal add -->
+    <div class="modal fade" id="myModaladd" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">add new work tab</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__image" id="controls">
+                        <input type="text" class="form__field" placeholder="Site name" id="nameWork">
+                        <input type="text" class="form__field" placeholder="Site image" id="imageWork">
+                        <input type="text" class="form__field" placeholder="Local url" id="localWork">
+                        <input type="text" class="form__field" placeholder="Dev url" id="devWork">
+                        <input type="text" class="form__field" placeholder="Live url" id="liveWork">
+                        <button type="button" class="btn--primary btn--inside uppercase work__btn" id="addWorkSite" onclick="addWorkSite();">Add work site</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal add -->
+    <div class="modal fade" id="myModaladdFun" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">add new fun tab</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="modal__image" id="controls">
+                        <input type="text" class="form__field" placeholder="Site name" id="nameFun">
+                        <input type="text" class="form__field" placeholder="Site image" id="imageFun">
+                        <input type="text" class="form__field" placeholder="URL" id="URLFun">
+                        <button type="button" class="btn--primary btn--inside uppercase work__btn" id="addFunSite" onclick="addFunSite();">Add fun site</button>
+                    </div>
+                    <div id="carlistholder">
+
+                        <ul id="carlist"></ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+<!--  ALERT MESSAGE  -->
+    
+    <div class="alert__msg">
+        <span>all inputs have to be filled</span>
+    </div>
+
+    <!-- Custom Style JS -->
+    <script type="text/javascript" src="js/bundle.js"></script>
+</body>
+
+</html>
