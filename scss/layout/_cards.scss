@@ -191,12 +191,16 @@ Slick Dots
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     cursor: pointer
 }
-.local__link:hover{
+
+.local__link:hover {
     color: $red_color;
 }
-.local__link:active, .local__link:focus{
+
+.local__link:active,
+.local__link:focus {
     color: #333;
 }
+
 .links__card {
     transition: 0.6s ease-in-out;
     position: absolute;
@@ -282,8 +286,19 @@ p {
     }
 }
 
-.work__block, .fun__block {
+.work__block,
+.fun__block {
     margin-bottom: 50px;
+    transition: 0.6s ease-in-out;
+}
+
+.hidden__block {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: 0.6s ease-in-out;
 }
 
 

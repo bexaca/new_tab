@@ -87,7 +87,7 @@ function updateWorkList(transaction, results) {
     for (k = 0; k < numberOfWork; k++) {
 
         var work__block = document.createElement('div');
-        work__block.innerHTML = '<div class="single__card"><div class="shop-card"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imagesWork[k] + ')"></div></figure></div><div class="title">' + sitesWork[k] + '</div><div class="cta"><a href="#/" class="btn" onclick="deleteWork(' + IDWork[k] + ')">x<span class="bg"></span></a></div></div><div class="links__card"><a class="local__link" href="' + localWork[k] + '" target="_blank"><div class="link__card"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + devWork[k] + '"><div class="link__card"><span><i class="fa fa-cog" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + liveWork[k] + '"><div class="link__card"><span><i class="fa fa-globe" aria-hidden="true"></i></span></div></a></div></div>'
+        work__block.innerHTML = '<div class="single__card"><div class="shop-card"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imagesWork[k] + ')"></div></figure></div><div class="title">' + sitesWork[k] + '</div><div class="cta"><a href="#/" class="btn del" onclick="deleteWork(' + IDWork[k] + ')">x<span class="bg"></span></a></div></div><div class="links__card"><a class="local__link" href="' + localWork[k] + '" target="_blank"><div class="link__card"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + devWork[k] + '"><div class="link__card"><span><i class="fa fa-cog" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + liveWork[k] + '"><div class="link__card"><span><i class="fa fa-globe" aria-hidden="true"></i></span></div></a></div></div>'
         work__block.setAttribute('class', 'col-md-3 work__block');
         document.getElementsByClassName('work__card')[0].appendChild(work__block);
     }
@@ -173,7 +173,7 @@ function updateFunList(transaction, results) {
     for (k = 0; k < numberOfFun; k++) {
 
         var fun__block = document.createElement('div');
-        fun__block.innerHTML = '<a target="_blank" href="' + URLFun[k] + '"><div class="shop-card"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imagesFun[k] + ')"></div></figure></div><div class="title">' + sitesFun[k] + '</div><div class="cta"><a href="#/" class="btn" onclick="deleteFun(' + IDFun[k] + ')">x<span class="bg"></span></a></div></div></a>'
+        fun__block.innerHTML = '<a target="_blank" href="' + URLFun[k] + '"><div class="shop-card"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imagesFun[k] + ')"></div></figure></div><div class="title">' + sitesFun[k] + '</div><div class="cta"><a href="#/" class="btn del" onclick="deleteFun(' + IDFun[k] + ')">x<span class="bg"></span></a></div></div></a>'
 
         fun__block.setAttribute('class', 'col-md-3 fun__block');
 

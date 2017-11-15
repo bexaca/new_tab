@@ -12801,6 +12801,7 @@ __webpack_require__(14)
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {
 
 jQuery(document).ready(function () {
+    jQuery('.form__field').focus();
     jQuery(".links__card").hover(function () {
         jQuery(this).siblings(".shop-card").toggleClass("card__hover");
     });
@@ -12813,8 +12814,13 @@ jQuery(document).ready(function () {
             setTimeout(function () {
                 jQuery(".alert__msg").removeClass("alert__msg-show");
             }, 4000);
+            jQuery(this).attr("data-dismiss", "");
         } else {
-            $('.fun__card').append('<div class="col-md-3 fun__block"><div class="shop-card"><a target="_blank" href="' + URLFun + '"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imageFun + ')"></div></figure></div><div class="title">' + nameFun + '</div></a><div class="cta"><a href="#/" class="btn">x<span class="bg"></span></a></div></div></div>');
+            $('.fun__card').append('<div class="col-md-3 fun__block hidden__block"><div class="shop-card"><a target="_blank" href="' + URLFun + '"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imageFun + ')"></div></figure></div><div class="title">' + nameFun + '</div></a><div class="cta"><a href="#/" class="btn">x<span class="bg"></span></a></div></div></div>');
+            setTimeout(function () {
+                jQuery(".fun__block.hidden__block").css("opacity", 1);
+            }, 100);
+            jQuery(this).attr("data-dismiss", "modal");
         }
     });
     jQuery("#addWorkSite").click(function () {
@@ -12828,14 +12834,18 @@ jQuery(document).ready(function () {
             setTimeout(function () {
                 jQuery(".alert__msg").removeClass("alert__msg-show");
             }, 4000);
+            jQuery(this).attr("data-dismiss", "");
         } else {
-            jQuery('.work__card').append('<div class="col-md-3 work__block"><div class="single__card"><div class="shop-card"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imageWork + ')"></div></figure></div><div class="title">' + nameWork + '</div><div class="cta"><a href="#/" class="btn">x<span class="bg"></span></a></div></div><div class="links__card"><a class="local__link" href="' + localWork + '" target="_blank"><div class="link__card"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + devWork + '"><div class="link__card"><span><i class="fa fa-cog" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + liveWork + '"><div class="link__card"><span><i class="fa fa-globe" aria-hidden="true"></i></span></div></a></div></div></div>');
+            jQuery('.work__card').append('<div class="col-md-3 work__block hidden__block"><div class="single__card"><div class="shop-card"><div class="slider"><figure data-color="#E24938, #A30F22"><div class="image__div" style="background-image:url(' + imageWork + ')"></div></figure></div><div class="title">' + nameWork + '</div><div class="cta"><a href="#/" class="btn">x<span class="bg"></span></a></div></div><div class="links__card"><a class="local__link" href="' + localWork + '" target="_blank"><div class="link__card"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + devWork + '"><div class="link__card"><span><i class="fa fa-cog" aria-hidden="true"></i></span></div></a><a target="_blank" href="' + liveWork + '"><div class="link__card"><span><i class="fa fa-globe" aria-hidden="true"></i></span></div></a></div></div></div>');
+            setTimeout(function () {
+                jQuery(".work__block.hidden__block").css("opacity", 1);
+            }, 100);
+            jQuery(this).attr("data-dismiss", "modal");
         }
     });
-
-    jQuery(".cta a.btn").click(function () {
-        jQuery(this).parent().parent().parent().parent().remove('.col-md-3.work__block');
-        jQuery(this).parent().parent().parent().remove('.col-md-3.fun__block');
+    jQuery(".cta a.btn.del").click(function () {
+        jQuery(this).parent().parent().parent().css("opacity", 0);
+        jQuery(this).parent().parent().parent().addClass("hide__this");
     });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
